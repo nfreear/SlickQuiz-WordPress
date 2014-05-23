@@ -66,7 +66,7 @@ if ( !class_exists( 'SlickQuizModel' ) ) {
         {
             $status = null;
 
-            if ( $quiz->publishedJson ) {
+            if ( isset($quiz->publishedJson) && $quiz->publishedJson ) {
                 if ( $quiz->publishedDate == $quiz->lastUpdatedDate ) {
                     $status = self::PUBLISHED;
                 } else {
