@@ -166,3 +166,16 @@
 .slickQuizWrapper .quizShare .facebook {
     margin-right: 0;
 }
+
+/* SlickQuiz print CSS [Bug: #86]. */
+@media print {
+
+    .slickQuizWrapper .questions li.question {
+        display: block;
+    }
+
+    .slickQuizWrapper a.button,
+    .slickQuizWrapper .questionCount {
+        display: none !important;
+    }
+}
